@@ -13,6 +13,7 @@
         <module>service-web</module>
         <module>common-deploy</module>
         <module>common-log</module>
+        <module>service-log</module>
     </modules>
 
     <parent>

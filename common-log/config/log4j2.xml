@@ -7,7 +7,7 @@
    	 级别：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
 -->
 
-<Configuration status="DEBUG" monitorInterval="10">
+<Configuration status="INFO" monitorInterval="10">
 
     <Properties>
         <!-- 配置日志文件输出目录 -->

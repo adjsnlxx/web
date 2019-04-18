@@ -9,6 +9,7 @@
         <module name="common-deploy" />
         <module name="common-log" />
         <module name="common-utils" />
+        <module name="service-log" />
         <module name="service-web" />
       </profile>
     </annotationProcessing>
