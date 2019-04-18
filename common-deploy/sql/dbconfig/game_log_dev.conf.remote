@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    datasource: root:123456@tcp(192.168.8.128:3306)/game_log_dev?parseTime=true
+    dir: migration/game_log_dev

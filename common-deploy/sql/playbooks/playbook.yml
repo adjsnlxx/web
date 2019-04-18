@@ -1,0 +1,36 @@
+---
+- hosts: 127.0.0.1
+  gather_facts: False
+  vars:
+    items:
+      - activity_dict
+      - activity_log
+      - club
+      - club_dict
+      - club_log
+      - dsqp_dict
+      - dsqp_mp
+      - game_chargecenter_dev
+      - game_dev
+      - game_log_dev
+  tasks:
+    - template:
+        src: dbconfig.j2
+        dest: "../dbconfig/{{ item }}.conf.template"
+      with_items: "{{ items }}"
+
+    - template:
+        src: sql-migrate.j2
+        dest: "../{{ item }}.sh"
+        mode: 0755
+      with_items: "{{ items }}"
+
+    # - file:
+    #     path: ../migration/{{ item }}
+    #     state: directory
+    #   with_items: "{{ items }}"
+
+    # - file:
+    #     path: ../migration/{{ item }}/.gitkeep
+    #     state: touch        
+    #   with_items: "{{ items }}"

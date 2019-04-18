@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    datasource: root@/activity_dict?parseTime=true
+    dir: migration/activity_dict

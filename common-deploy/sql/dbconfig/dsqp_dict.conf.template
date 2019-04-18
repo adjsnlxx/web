@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    datasource: root@/dsqp_dict?parseTime=true
+    dir: migration/dsqp_dict

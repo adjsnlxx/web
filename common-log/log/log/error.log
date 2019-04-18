@@ -1,0 +1,3 @@
+2019-04-18 10:12:33.853|ERROR|testlog|main| com.web.App.main(App.java:19) test error
+2019-04-18 10:14:27.359|ERROR|testlog|main| com.web.App.main(App.java:19) test error
+2019-04-18 10:14:43.415|ERROR|testlog|main| com.web.App.main(App.java:19) test error

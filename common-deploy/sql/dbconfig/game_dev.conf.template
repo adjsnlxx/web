@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    datasource: root@/game_dev?parseTime=true
+    dir: migration/game_dev
