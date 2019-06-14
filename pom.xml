@@ -15,6 +15,7 @@
         <module>common-log</module>
         <module>service-log</module>
         <module>develop-test</module>
+        <module>service-dao</module>
     </modules>
 
     <parent>

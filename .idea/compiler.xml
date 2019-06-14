@@ -10,6 +10,7 @@
         <module name="common-log" />
         <module name="common-utils" />
         <module name="develop-test" />
+        <module name="service-dao" />
         <module name="service-log" />
         <module name="service-web" />
       </profile>
