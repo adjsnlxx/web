@@ -11,6 +11,7 @@ spring:
         healthCheckInterval: 15s
         tags: client-/${spring.application.name}
         instanceId: ${spring.application.name}:${server.port}
+
 feign:
   hystrix:
     enabled: true

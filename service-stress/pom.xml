@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>develop-test</artifactId>
+    <artifactId>service-stress</artifactId>
 
-    <name>develop-test</name>
+    <name>service-stress</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -29,10 +29,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_tcp -->
         <dependency>
-            <groupId>au.com.datasymphony</groupId>
-            <artifactId>EasyFlow</artifactId>
-            <version>1.3.1</version>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_tcp</artifactId>
+            <version>5.1.1</version>
         </dependency>
 
     </dependencies>

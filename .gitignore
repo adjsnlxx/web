@@ -12,6 +12,7 @@
 
 */**/.settings
 */**/log/log
+*/**/log/log/.*
 */**/target
 */**/.*
 */**/*-reduced-pom.xml

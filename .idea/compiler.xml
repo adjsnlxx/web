@@ -6,13 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="develop-test" />
-        <module name="common-log" />
-        <module name="service-web" />
         <module name="common-deploy" />
-        <module name="service-log" />
-        <module name="service-dao" />
+        <module name="common-log" />
         <module name="common-utils" />
+        <module name="develop-test" />
+        <module name="service-dao" />
+        <module name="service-log" />
+        <module name="service-stress" />
+        <module name="service-web" />
       </profile>
     </annotationProcessing>
   </component>

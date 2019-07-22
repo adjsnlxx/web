@@ -14,4 +14,7 @@ mycat.bat start
 停止：
 mycat.bat stop
 
+重启：
+mycat.bat restart
+
 ```
