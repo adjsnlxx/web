@@ -16,6 +16,7 @@
         <module>service-log</module>
         <module>develop-test</module>
         <module>service-dao</module>
+        <module>service-gateway</module>
     </modules>
 
     <parent>

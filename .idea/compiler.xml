@@ -23,6 +23,7 @@
       <module name="common-utils" options="-parameters" />
       <module name="develop-test" options="-parameters" />
       <module name="service-dao" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
       <module name="service-log" options="-parameters" />
       <module name="service-web" options="-parameters" />
     </option>
