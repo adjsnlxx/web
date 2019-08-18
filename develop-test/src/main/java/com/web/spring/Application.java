@@ -1,6 +1,8 @@
 package com.web.spring;
 
 import com.web.spring.test.UserService;
+import com.web.spring.test.aop.AopTest;
+import com.web.spring.test.aop.AppAopConfig;
 import com.web.spring.test.ioc.People;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,5 +31,12 @@ public class Application {
 
         // 关闭容器,释放JVM资源
         context.close();
+
+        // Spring AOP
+        AnnotationConfigApplicationContext aopContext = new AnnotationConfigApplicationContext(AppAopConfig.class);
+        AopTest aopTest = aopContext.getBean(AopTest.class);
+        aopTest.test();
+
+        aopContext.close();
     }
 }
