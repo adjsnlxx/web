@@ -1,4 +1,4 @@
-package com.web;
+package com.web.js;
 
 import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-public class App {
+public class JsTest {
 
 	private static final String jsFile = "test.js";
 
