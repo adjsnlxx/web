@@ -17,6 +17,7 @@
         <module>develop-test</module>
         <module>service-dao</module>
         <module>service-gateway</module>
+        <module>service-stress</module>
     </modules>
 
     <parent>
