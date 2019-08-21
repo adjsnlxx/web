@@ -18,16 +18,21 @@ spring:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  jpa:
+    database: MySQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
 feign:
   hystrix:
     enabled: true
 
 server:
   port: 8080
-
-mybatis:
-  typeAliasesPackage: com.web.dao.entity
-  mapperLocations:
-    classpath: mapXml/UserMapper.xml
 
 
