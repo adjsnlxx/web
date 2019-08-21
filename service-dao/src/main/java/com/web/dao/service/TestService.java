@@ -1,7 +1,7 @@
-package com.web.service;
+package com.web.dao.service;
 
 import com.web.dao.entity.TestEntity;
-import com.web.repository.TestRepository;
+import com.web.dao.repository.TestRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

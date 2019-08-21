@@ -1,9 +1,7 @@
 package com.web.controller;
 
 import com.web.dao.entity.TestEntity;
-import com.web.dao.entity.User;
-import com.web.dao.mapper.UserMapper;
-import com.web.service.TestService;
+import com.web.dao.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
