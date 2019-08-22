@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    status : 这个用于设置log4j2自身内部的信息输出,可以不设置,当设置成trace时,会看到log4j2内部各种详细输出
+    monitorInterval : Log4j能够自动检测修改配置文件和重新配置本身, 设置间隔秒数。
+   	 注：本配置文件的目标是将不同级别的日志输出到不同文件，最大5MB一个文件，文件数据达到最大值时，旧数据会被压缩并放进指定文件夹
+   	 级别：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+-->
+
+<Configuration status="INFO" monitorInterval="10">
+
+    <Properties>
+        <!-- 配置日志文件输出目录 -->
+        <Property name="LOG_HOME">${sys:server_path}log</Property>
+    </Properties>
+
+    <Appenders>
+        <!--这个输出控制台的配置，这里输出除了warn和error级别的信息到System.out-->
+        <Console name="console_out_appender" target="SYSTEM_OUT">
+            <!-- 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) -->
+            <ThresholdFilter level="warn" onMatch="DENY" onMismatch="ACCEPT"/>
+            <!-- 输出日志的格式 -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n"/>
+        </Console>
+
+        <!--这个输出控制台的配置，这里输出warn和error级别的信息到System.err-->
+        <Console name="console_err_appender" target="SYSTEM_ERR">
+            <!-- 控制台只输出level及以上级别的信息(onMatch),其他的直接拒绝(onMismatch) -->
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出日志的格式 -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n"/>
+        </Console>
+
+        <!-- TRACE级别日志 -->
+        <!-- 设置日志格式并配置日志压缩格式，压缩文件独立放在一个文件夹内-->
+        <!-- name：Appender名称 immediateFlush：log4j2接收到日志事件时，是否立即将日志刷到磁盘。默认为true-->
+        <!-- fileName：日志存储路径 filePattern：历史日志封存路径-->
+        <!--其中%d{yyyyMMddHH}表示了封存历史日志的时间单位（目前单位为小时，yyyy表示年，MM表示月，dd表示天，HH表示小时，mm表示分钟，ss表示秒，SS表示毫秒-->
+        <!-- 注意后缀，log4j2自动识别zip等后缀，表示历史日志需要压缩-->
+        <RollingRandomAccessFile name="trace_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/trace.log"
+                                 filePattern="${LOG_HOME}/trace/trace.%d{yyyyMMdd_HH}.%i.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- 两个配置任选其一 -->
+                <!-- 基于时间的触发策略。该策略主要是完成周期性的log文件封存工作。有两个参数：
+                interval，integer型，指定两次封存动作之间的时间间隔。单位:以日志的命名精度来确定单位，比如yyyy-MM-dd-HH 单位为小时，yyyy-MM-dd-HH-mm 单位为分钟
+                modulate，boolean型，说明是否对封存时间进行调制。若modulate=true，则封存时间将以0点为边界进行偏移计算。比如，modulate=true，interval=4hours，那么假设上次封存日志的时间为03:00，则下次封存日志的时间为04:00，之后的封存时间依次为08:00，12:00，16:00，。。。 -->
+                <!-- filePattern后的日期格式，以及TimeBasedTriggeringPolicy的interval，日期格式精确到哪一位，interval也精确到哪一个单位 -->
+                <!-- 如果启用此配置，则日志会按文件名生成新压缩文件，  即如果filePattern配置的日期格式为 %d{yyyy-MM-dd HH} ，则每小时生成一个压缩文件，  如果filePattern配置的日期格式为 %d{yyyy-MM-dd} ，则天生成一个压缩文件 -->
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <!-- 每个日志文件最大5MB -->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <Filters>
+                <!-- level，表示最低接受的日志级别，博客配置的为INFO，即我们期望打印INFO级别以上的日志-->
+                <!-- onMatch，表示当日志事件的日志级别与level一致时，应怎么做。一般为ACCEPT，表示接受-->
+                <!-- onMismatch，表示日志事件的日志级别与level不一致时，应怎么做。一般为DENY，表示拒绝。也可以为NEUTRAL表示中立-->
+                <ThresholdFilter level="debug" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingRandomAccessFile>
+
+        <!-- DEBUG-->
+        <RollingRandomAccessFile name="debug_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/debug.log"
+                                 filePattern="${LOG_HOME}/debug/debug.%d{yyyyMMdd_HH}.%i.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingRandomAccessFile>
+
+        <!-- INFO -->
+        <RollingRandomAccessFile name="info_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/info.log"
+                                 filePattern="${LOG_HOME}/info/info.%d{yyyyMMdd_HH}.%i.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingRandomAccessFile>
+
+        <!-- WARN -->
+        <RollingRandomAccessFile name="warn_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/warn.log"
+                                 filePattern="${LOG_HOME}/warn/warn.%d{yyyyMMdd_HH}.%i.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingRandomAccessFile>
+
+        <!-- ERROR -->
+        <RollingRandomAccessFile name="error_appender"
+                                 immediateFlush="true" fileName="${LOG_HOME}/error.log"
+                                 filePattern="${LOG_HOME}/error/error.%d{yyyyMMdd_HH}.%i.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%p|${sys:server_name}|%t|%m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 配置日志的根节点 -->
+        <root level="info">
+            <appender-ref ref="console_out_appender"/>
+            <appender-ref ref="console_err_appender"/>
+            <appender-ref ref="trace_appender"/>
+            <appender-ref ref="debug_appender"/>
+            <appender-ref ref="info_appender"/>
+            <appender-ref ref="warn_appender"/>
+            <appender-ref ref="error_appender"/>
+        </root>
+    </Loggers>
+
+</Configuration>
