@@ -21,16 +21,11 @@ public class App {
 		Log.warn("test warn");
 		Log.debug("test debug");
 
-		try{
+		try {
 			int a = 1 / 0;
-		}catch (Exception e){
-			Log.error("error",e);
+		} catch (Exception e) {
+			Log.error("error", e);
 		}
 
-		try {
-			System.in.read();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 }

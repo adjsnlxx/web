@@ -1,7 +1,0 @@
-2019-04-18 10:12:33.853|ERROR|testlog|main| com.web.GatewayApplication.main(App.java:19) test error
-2019-04-18 10:14:27.359|ERROR|testlog|main| com.web.GatewayApplication.main(App.java:19) test error
-2019-04-18 10:14:43.415|ERROR|testlog|main| com.web.GatewayApplication.main(App.java:19) test error
-2019-04-18 10:16:03.066|ERROR|testlog|main| com.web.GatewayApplication.main(App.java:19) test error
-2019-04-18 10:16:03.273|ERROR|testlog|main| com.web.GatewayApplication.main(App.java:27) error java.lang.ArithmeticException: / by zero
-	at com.web.GatewayApplication.main(App.java:25)
-

@@ -20,4 +20,12 @@ public class TestService {
 	public long getMaxId() {
 		return testRepository.getMaxId();
 	}
+
+	public void addTestEntity() {
+		TestEntity testEntity = new TestEntity();
+		testEntity.setId(10L);
+		testEntity.setP1(123);
+		testEntity.setP2("123");
+		testRepository.saveAndFlush(testEntity);
+	}
 }

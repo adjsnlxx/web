@@ -28,4 +28,10 @@ public class TestController {
 	public String selectMaxId() {
 		return "maxId=" + testService.getMaxId();
 	}
+
+	@RequestMapping(value = "/addTest", method = RequestMethod.GET)
+	public String addTestEntity() {
+		testService.addTestEntity();
+		return "success";
+	}
 }

@@ -6,7 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface TestRepository extends JpaRepository<TestEntity, Long> {
 
-	//使用原生sql时Query注解需要添加属性，nativeQuery=true
+	/**
+	 * 使用原生sql时Query注解需要添加属性，nativeQuery=true
+	 * @return
+	 */
 	@Query(nativeQuery = true, value = "select max(Id) from test")
 	long getMaxId();
 }
