@@ -23,4 +23,9 @@ public class TestController {
 		Optional<TestEntity> test = testService.getTestById(1L);
 		return "hello, " + test.get().getP2();
 	}
+
+	@RequestMapping(value = "/testMaxId", method = RequestMethod.GET)
+	public String selectMaxId() {
+		return "maxId=" + testService.getMaxId();
+	}
 }

@@ -16,4 +16,8 @@ public class TestService {
 	public Optional<TestEntity> getTestById(Long id) {
 		return testRepository.findById(id);
 	}
+
+	public long getMaxId() {
+		return testRepository.getMaxId();
+	}
 }
