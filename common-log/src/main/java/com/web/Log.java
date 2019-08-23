@@ -1,14 +1,9 @@
 package com.web;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.ConfigurationSource;
-import org.apache.logging.log4j.core.config.Configurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Arrays;
 
@@ -21,21 +16,11 @@ public class Log {
 
 	private static final String msgSep = "\r\n";
 	private static boolean isMsgSep = false;
-	private static Logger logger; //= LogManager.getLogger(Log.class);
+	private static Logger logger;
 
-	public static boolean init(String log4j2Path, boolean msgSep) {
+	public static boolean init(boolean msgSep) {
 		isMsgSep = msgSep;
-
-		File config = new File(log4j2Path);
-		ConfigurationSource source;
-		try {
-			source = new ConfigurationSource(new FileInputStream(config), config);
-			Configurator.initialize(null, source);
-		} catch (FileNotFoundException e) {
-			System.err.println("Log log4j2 xml not find or reload error path:" + log4j2Path);
-			return false;
-		}
-		logger = LogManager.getLogger("");
+		logger = LoggerFactory.getLogger("");
 		return true;
 	}
 

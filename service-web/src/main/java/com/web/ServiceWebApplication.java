@@ -15,5 +15,7 @@ public class ServiceWebApplication {
 		System.setProperty("server_name", "testlog");
 
 		SpringApplication.run(ServiceWebApplication.class, args);
+
+		Log.init(false);
 	}
 }
