@@ -1,4 +1,8 @@
+# 默认的profile为dev，其他环境通过指定启动参数使用不同的profile，比如：
+# 测试环境：java -jar test-service.jar --spring.profiles.active=test
+# 生产环境：java -jar test-service.jar --spring.profiles.active=prod
 spring:
+  profiles: dev
   application:
     name: service-web
   cloud:
@@ -30,6 +34,10 @@ spring:
 
   logging:
     config: classpath:log4j2.xml
+
+# 自定义配置
+  test:
+    name: sam
 
 feign:
   hystrix:

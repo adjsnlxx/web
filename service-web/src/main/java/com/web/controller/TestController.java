@@ -1,6 +1,7 @@
 package com.web.controller;
 
 import com.web.Log;
+import com.web.config.TestConfig;
 import com.web.dao.entity.TestEntity;
 import com.web.dao.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,16 @@ public class TestController {
 	@Autowired
 	private TestService testService;
 
+	@Autowired
+	private TestConfig testConfig;
+
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String select() {
 		Log.info("test log4j2 ok");
-		Optional<TestEntity> test = testService.getTestById(1L);
-		return "hello, " + test.get().getP2();
+		Log.info("test custom config name:{}", testConfig.getName());
+
+		//		Optional<TestEntity> test = testService.getTestById(1L);
+		return "hello, " + testConfig.getName();
 	}
 
 	@RequestMapping(value = "/testMaxId", method = RequestMethod.GET)
