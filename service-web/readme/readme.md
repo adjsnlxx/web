@@ -15,3 +15,8 @@ prod：生产环境
 1、地址
 http://localhost:8080/test
 ```
+
+### 打包部署
+```
+1、使用spring-boot-maven-plugin打包，会将依赖的Jar 一起打进入
+```

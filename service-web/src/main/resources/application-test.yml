@@ -2,7 +2,7 @@
 # 测试环境：java -jar test-service.jar --spring.profiles.active=test
 # 生产环境：java -jar test-service.jar --spring.profiles.active=prod
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: service-web
   cloud:

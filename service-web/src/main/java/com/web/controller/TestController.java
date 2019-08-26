@@ -1,15 +1,12 @@
 package com.web.controller;
 
-import com.web.Log;
+import com.web.log.Log;
 import com.web.config.TestConfig;
-import com.web.dao.entity.TestEntity;
 import com.web.dao.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Optional;
 
 /**
  * Spring WebMVC

@@ -37,7 +37,7 @@ spring:
 
 # 自定义配置
 test:
-   name: sam
+   name: config test success
 
 feign:
   hystrix:

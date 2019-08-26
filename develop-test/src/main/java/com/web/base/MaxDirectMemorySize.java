@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 
 public class MaxDirectMemorySize {
+
 	public static void main(String[] args) {
 		System.out.println("maxMemoryValue = " + sun.misc.VM.maxDirectMemory());
 

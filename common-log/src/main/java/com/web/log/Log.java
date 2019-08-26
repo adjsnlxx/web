@@ -1,4 +1,4 @@
-package com.web;
+package com.web.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
