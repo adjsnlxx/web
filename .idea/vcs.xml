@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/common-log" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-account" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-gateway" vcs="svn" />
   </component>
 </project>

@@ -1,0 +1,49 @@
+# 默认的profile为dev，其他环境通过指定启动参数使用不同的profile，比如：
+# 测试环境：java -jar test-service.jar --spring.profiles.active=test
+# 生产环境：java -jar test-service.jar --spring.profiles.active=prod
+spring:
+  profiles: dev
+  application:
+    name: service-account
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+        tags: client-/${spring.application.name}
+        instanceId: ${spring.application.name}:${server.port}
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/web_main_db?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database: MySQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  logging:
+    config: classpath:log4j2.xml
+
+# 自定义配置
+test:
+   name: config test success
+
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 7100
+
+
