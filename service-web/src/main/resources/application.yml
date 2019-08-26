@@ -36,8 +36,8 @@ spring:
     config: classpath:log4j2.xml
 
 # 自定义配置
-  test:
-    name: sam
+test:
+   name: sam
 
 feign:
   hystrix:
