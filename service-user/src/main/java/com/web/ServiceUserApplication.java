@@ -9,13 +9,13 @@ import java.io.File;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ServiceAccountApplication {
+public class ServiceUserApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("server_path", "D:\\work\\web\\service-account" + File.separator);
+		System.setProperty("server_path", "D:\\work\\web\\service-user" + File.separator);
 		System.setProperty("server_name", "testlog");
 
-		SpringApplication.run(ServiceAccountApplication.class, args);
+		SpringApplication.run(ServiceUserApplication.class, args);
 
 		Log.init(false);
 	}

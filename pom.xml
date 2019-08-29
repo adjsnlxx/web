@@ -18,7 +18,7 @@
         <module>service-dao</module>
         <module>service-gateway</module>
         <module>service-stress</module>
-        <module>service-account</module>
+        <module>service-user</module>
     </modules>
 
     <parent>
