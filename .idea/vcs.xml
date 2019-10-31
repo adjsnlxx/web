@@ -2,8 +2,15 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/common-deploy" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/common-log" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/common-utils" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/develop-test" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-dao" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-gateway" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-log" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-stress" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-user" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-web" vcs="svn" />
   </component>
 </project>
