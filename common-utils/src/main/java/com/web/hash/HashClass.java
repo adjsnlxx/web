@@ -1,4 +1,4 @@
-package com.web;
+package com.web.hash;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
