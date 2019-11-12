@@ -13,6 +13,7 @@
         <module name="service-dao" />
         <module name="service-gateway" />
         <module name="service-log" />
+        <module name="service-register" />
         <module name="service-stress" />
         <module name="service-user" />
         <module name="service-web" />

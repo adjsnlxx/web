@@ -9,6 +9,7 @@
     <mapping directory="$PROJECT_DIR$/service-dao" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-gateway" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-log" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/service-register" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-stress" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-user" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/service-web" vcs="svn" />

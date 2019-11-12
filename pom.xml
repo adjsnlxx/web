@@ -19,6 +19,7 @@
         <module>service-gateway</module>
         <module>service-stress</module>
         <module>service-user</module>
+        <module>service-register</module>
     </modules>
 
     <parent>
