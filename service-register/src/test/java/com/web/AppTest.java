@@ -13,6 +13,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+// 通过@RunWith注解，使用junit整合spring
+// @ContextConfiguration(locations="classpath:applicationContext.xml")//加载核心配置文件，自动构建spring容器
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {RegisterApplication.class})
 public class AppTest {
