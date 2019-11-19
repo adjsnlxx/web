@@ -1,6 +1,6 @@
 def helloWithoutParam(){
     println "start to call helloWithoutParam!"
-    return "success, helloWithoutParam";
+    return "success, helloWithoutParam sam";
 }
 
 def helloWithParam(person, id){

@@ -30,7 +30,13 @@ public class GroovyTest {
 			e.printStackTrace();
 		}
 
-		System.out.println("firstTime = "+(System.currentTimeMillis()-curTime));
+		System.out.println("firstTime = " + (System.currentTimeMillis() - curTime));
+
+		try {
+			Thread.sleep(15000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		curTime = System.currentTimeMillis();
 		try {
@@ -39,11 +45,11 @@ public class GroovyTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("secondTime = "+(System.currentTimeMillis()-curTime));
+		System.out.println("secondTime = " + (System.currentTimeMillis() - curTime));
 
 		Person person = new Person("sam", "local", 18);
 		try {
-			result = (String) GroovyUitl.invokeMethod("hello.groovy", "helloWithParam", person,"1");
+			result = (String) GroovyUitl.invokeMethod("hello.groovy", "helloWithParam", person, "1");
 			System.out.println("helloWithParam result = " + result);
 		} catch (Exception e) {
 			e.printStackTrace();
