@@ -1,11 +1,10 @@
-package com.web.js;
+package com.web.jstest;
 
 import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import javax.script.SimpleScriptContext;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
