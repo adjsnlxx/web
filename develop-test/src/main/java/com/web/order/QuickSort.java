@@ -11,6 +11,8 @@ public class QuickSort {
 		int[] array = { 0, 2, 6, 4, 3 };
 		sort(array, 0, array.length - 1);
 		System.out.println(Arrays.toString(array));
+
+		System.out.println(Integer.MAX_VALUE);
 	}
 
 	public static void sort(int[] array, int low, int high) {

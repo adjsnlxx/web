@@ -2,7 +2,7 @@ package com.web.groovytest;
 
 import java.io.IOException;
 
-public class GroovyTest {
+public class GroovyTest1 {
 
 	public static void main(String[] args) {
 		String curPath = System.getProperty("user.dir");
@@ -19,15 +19,15 @@ public class GroovyTest {
 
 		String result = null;
 		try {
-			result = (String) GroovyUtil.invokeMethod("hello.groovy", "helloWithoutParam", null);
-			System.out.println("helloWithoutParam result = " + result);
+			result = (String) GroovyUtil.invokeMethod("hello.groovy", "helloGroovy", "I", "do");
+			System.out.println("run result = " + result);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 		System.out.println("firstTime = " + (System.currentTimeMillis() - curTime));
 
-		System.out.println("wait ....");
+		System.out.println("wait modification ....");
 		try {
 			System.in.read();
 		} catch (IOException e) {
@@ -36,21 +36,13 @@ public class GroovyTest {
 
 		curTime = System.currentTimeMillis();
 		try {
-			result = (String) GroovyUtil.invokeMethod("hello.groovy", "helloWithoutParam", null);
-			System.out.println("helloWithoutParam result = " + result);
+			result = (String) GroovyUtil.invokeMethod("hello.groovy", "helloGroovy", "I", "do");
+			System.out.println("run result = " + result);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		System.out.println("secondTime = " + (System.currentTimeMillis() - curTime));
-
-		Person person = new Person("sam", "local", 18);
-		try {
-			result = (String) GroovyUtil.invokeMethod("hello.groovy", "helloWithParam", person, "1");
-			System.out.println("helloWithParam result = " + result);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
 	}
 
 }
