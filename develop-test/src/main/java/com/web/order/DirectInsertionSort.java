@@ -9,7 +9,7 @@ public class DirectInsertionSort {
 
 	public static void main(String[] args) {
 		int[] array = { 5, 4, 2, 3, 1 };
-		sort1(array);
+		sort(array);
 		System.out.println(Arrays.toString(array));
 	}
 
