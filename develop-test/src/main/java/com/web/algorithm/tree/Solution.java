@@ -1,17 +1,13 @@
-package com.web.tree;
+package com.web.algorithm.tree;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// 1.4142136573791504
-		System.out.println(Math.sqrt(2));
-		System.out.println(new Solution().calcSqrt(2));
+		System.out.println(Math.sqrt(8));
+		System.out.println(new Solution().calcSqrt(8));
 		//		TreeNode root = new TreeNode(1);
 		//
 		//		TreeNode left = new TreeNode(2);

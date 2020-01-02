@@ -1,4 +1,4 @@
-package com.web.order;
+package com.web.algorithm.order;
 
 import java.util.Arrays;
 

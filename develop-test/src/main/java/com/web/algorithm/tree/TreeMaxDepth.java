@@ -1,4 +1,4 @@
-package com.web.tree;
+package com.web.algorithm.tree;
 
 /**
  * 求二叉树的最大深度，那么直接套递归解题三部曲模版：

@@ -1,4 +1,4 @@
-package com.web.order;
+package com.web.algorithm.order;
 
 /**
  * 交换排序：冒泡排序
