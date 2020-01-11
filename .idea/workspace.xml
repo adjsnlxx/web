@@ -40,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TreeTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TreeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+            <state relative-caret-position="415">
+              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
               <folding>
                 <element signature="docComment;method#invertTree#0;class#TreeTest#0" />
                 <element signature="method#invertTree#0;class#TreeTest#0" />
@@ -55,6 +55,61 @@
                 <element signature="docComment;method#hasPathSum#0;class#TreeTest#0" />
                 <element signature="method#hasPathSum#0;class#TreeTest#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecursionTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/recursion/RecursionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;method#calcFibonacciSequence#0;class#RecursionTest#0" />
+                <element signature="method#calcFibonacciSequence#0;class#RecursionTest#0" />
+                <element signature="method#calcFactorial#0;class#RecursionTest#0" />
+                <element signature="method#findArrange#0;class#RecursionTest#0" />
+                <element signature="docComment;method#climbStairs#0;class#RecursionTest#0" />
+                <element signature="method#climbStairs#0;class#RecursionTest#0" />
+                <element signature="e#2842#2843#0" expanded="true" />
+                <element signature="e#2873#2874#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyLinkedList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/linkedlist/MyLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="179" column="44" lean-forward="true" selection-start-line="179" selection-start-column="44" selection-end-line="179" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="563" column="6" selection-start-line="563" selection-start-column="6" selection-end-line="563" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="473" lean-forward="true" selection-start-line="473" selection-end-line="473" />
             </state>
           </provider>
         </entry>
@@ -122,7 +177,6 @@
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/queue/MyLinkedQueue.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/queue/CycleQueue.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/stack/StackTest.java" />
-        <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/recursion/RecursionTest.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/order/BubbleSort.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/tree/Solution.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/Trie.java" />
@@ -132,6 +186,7 @@
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/Heap.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/Solution.java" />
         <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeTest.java" />
+        <option value="$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/recursion/RecursionTest.java" />
       </list>
     </option>
   </component>
@@ -160,10 +215,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="27" />
-    <option name="y" value="9" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="916" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -214,15 +269,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
+              <item name="recursion" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,7 +332,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TreeTest">
+  <component name="RunManager" selected="Application.RecursionTest">
     <configuration name="RecursionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.web.algorithm.recursion.RecursionTest" />
       <module name="develop-test" />
@@ -410,11 +465,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RecursionTest" />
         <item itemvalue="Application.TreeTest" />
         <item itemvalue="Application.StringTest" />
         <item itemvalue="Application.Trie" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.RecursionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -462,6 +517,8 @@
       <workItem from="1577755353199" duration="31770000" />
       <workItem from="1577805102631" duration="6063000" />
       <workItem from="1577853071711" duration="27349000" />
+      <workItem from="1578047334032" duration="590000" />
+      <workItem from="1578745977013" duration="6452000" />
     </task>
     <servers />
   </component>
@@ -498,7 +555,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387214000" />
+    <option name="totallyTimeSpent" value="394303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -523,7 +580,7 @@
       <window_info anchor="right" id="Structure" order="10" sideWeight="0.74954295" side_tool="true" weight="0.15682139" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2457293" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2457293" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.33647376" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -531,48 +588,23 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22470434" />
-      <window_info anchor="bottom" id="Thumbnails" weight="0.3298292" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22470434" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3293348" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6227642" visible="true" weight="0.21319444" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6227642" visible="true" weight="0.175" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22470434" />
-      <window_info anchor="right" id="Structure" order="10" sideWeight="0.74954295" side_tool="true" weight="0.15682139" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6227642" visible="true" weight="0.175" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.25045705" weight="0.15682139" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.3293348" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info id="Persistence" order="0" sideWeight="0.37723577" side_tool="true" weight="0.1401919" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="right" id="CDI" order="11" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3293348" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2457293" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Thumbnails" order="8" weight="0.3298292" />
+      <window_info id="Persistence" order="0" sideWeight="0.37723577" side_tool="true" weight="0.1401919" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="CDI" order="11" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3293348" />
     </layout>
     <layout-to-restore>
       <window_info id="Persistence" order="0" sideWeight="0.37723577" side_tool="true" weight="0.1401919" />
@@ -627,7 +659,7 @@
           <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -639,13 +671,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/linkedlist/MyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Collections.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Arrays.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -669,7 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Vector.java" />
     <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/array/ArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -726,18 +750,10 @@
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Stack.java" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java" />
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java" />
     <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/stack/StackTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="237" column="47" lean-forward="true" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/recursion/RecursionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="131" column="19" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="131" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -830,13 +846,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/tree/RecursionSum.java" />
-    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeMaxDepth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeMaxDepth.java" />
     <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/string/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
@@ -855,12 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,17 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#136#137#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,17 +889,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1315">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/Solution.java" />
     <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        <state relative-caret-position="415">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
           <folding>
             <element signature="docComment;method#invertTree#0;class#TreeTest#0" />
             <element signature="method#invertTree#0;class#TreeTest#0" />
@@ -916,6 +903,51 @@
             <element signature="method#calcSqrt#0;class#TreeTest#0" />
             <element signature="docComment;method#hasPathSum#0;class#TreeTest#0" />
             <element signature="method#hasPathSum#0;class#TreeTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="473" lean-forward="true" selection-start-line="473" selection-end-line="473" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="563" column="6" selection-start-line="563" selection-start-column="6" selection-end-line="563" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/linkedlist/MyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="179" column="44" lean-forward="true" selection-start-line="179" selection-start-column="44" selection-end-line="179" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/tree/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/develop-test/src/main/java/com/web/algorithm/recursion/RecursionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;method#calcFibonacciSequence#0;class#RecursionTest#0" />
+            <element signature="method#calcFibonacciSequence#0;class#RecursionTest#0" />
+            <element signature="method#calcFactorial#0;class#RecursionTest#0" />
+            <element signature="method#findArrange#0;class#RecursionTest#0" />
+            <element signature="docComment;method#climbStairs#0;class#RecursionTest#0" />
+            <element signature="method#climbStairs#0;class#RecursionTest#0" />
+            <element signature="e#2842#2843#0" expanded="true" />
+            <element signature="e#2873#2874#0" expanded="true" />
           </folding>
         </state>
       </provider>
