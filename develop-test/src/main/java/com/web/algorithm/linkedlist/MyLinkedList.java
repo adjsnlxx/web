@@ -1,5 +1,13 @@
 package com.web.algorithm.linkedlist;
 
+import com.web.algorithm.tree.TreeNode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
 public class MyLinkedList {
 
 	// 头结点
@@ -70,6 +78,20 @@ public class MyLinkedList {
 		reverse(reverseList, node.next);
 		reverseList.add(node.value);
 	}
+
+	public MyNode reverse(MyNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+
+		MyNode p = reverse(head.next);
+		head.next.next = head;
+		head.next = null;
+		return p;
+	}
+
+
+
 
 	/**
 	 * 实现两个有序的链表合并为一个有序链表
@@ -176,27 +198,154 @@ public class MyLinkedList {
 		}
 	}
 
+	public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		List<List<Integer>> result = new LinkedList<>();
+		if (root == null)  {
+			return result;
+		}
+
+		LinkedList<TreeNode> q = new LinkedList<>();
+		q.addFirst(root);
+
+		boolean toR = true;
+
+		while (!q.isEmpty()) {
+			int size = q.size();
+			LinkedList<Integer> tmp = new LinkedList<>();
+			for (int i = 0; i < size; i++) {
+				TreeNode temp = null;
+				if (toR) {
+					temp = q.removeFirst();
+					if (temp.left != null) {
+						q.addLast(temp.left);
+					}
+
+					if (temp.right != null) {
+						q.addLast(temp.right);
+					}
+				} else {
+					temp = q.removeLast();
+					if (temp.right != null) {
+						q.addFirst(temp.right);
+					}
+
+					if (temp.left != null) {
+						q.addFirst(temp.left);
+					}
+				}
+
+				tmp.addLast(temp.val);
+			}
+
+			result.add(tmp);
+			toR = !toR;
+		}
+
+		return result;
+	}
+
+	public static int[][] merge(int[][] intervals) {
+		List<int[]> res = new ArrayList<>();
+		if (intervals == null || intervals.length == 0) {
+			return res.toArray(new int[0][]);
+		}
+
+		// Arrays.sort(intervals, (a, b) -> a[0] - b[0]);// a[0] - b[0]大于0就交换顺序
+		// 根据二维数组第一个数字大小按每一行整体排序
+		Arrays.sort(intervals, new Comparator<int[]>() {
+			@Override
+			public int compare(int[] o1, int[] o2) {
+				return o1[0] - o2[0];
+			}
+		});
+
+		int i = 0;
+		while (i < intervals.length) {
+			int left = intervals[i][0];
+			int right = intervals[i][1];
+			// i不能到最后一行,所以要小于(数组的长度 - 1)
+			// 判断所在行的right和下一行的left大小,对right重新进行赋最大值,之后再不断进行while循环判断
+			while (i < intervals.length - 1 && right >= intervals[i + 1][0]) {
+				i++;
+				right = Math.max(right, intervals[i][1]);
+			}
+			res.add(new int[] { left, right });
+			i++;
+		}
+		return res.toArray(new int[0][]);
+	}
+
+
+	public static boolean checkInclusion(String s1, String s2) {
+		if (s1.length() > s2.length()) {
+			return false;
+		}
+		int[] s1map = new int[26];
+		for (int i = 0; i < s1.length(); i++) {
+			s1map[s1.charAt(i) - 'a']++;
+		}
+
+		for (int i = 0; i <= s2.length() - s1.length(); i++) {
+			int[] s2map = new int[26];
+			for (int j = 0; j < s1.length(); j++) {
+				s2map[s2.charAt(i + j) - 'a']++;
+			}
+
+			if (matches(s1map, s2map)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public static boolean matches(int[] s1map, int[] s2map) {
+		for (int i = 0; i < 26; i++) {
+			if (s1map[i] != s2map[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public static void main(String[] args) {
-		MyLinkedList a = new MyLinkedList();
-		a.add(1);
-		a.add(4);
-		a.add(5);
+		int value = 197;
 
-		MyLinkedList b = new MyLinkedList();
-		b.add(3);
-		b.add(7);
-		b.add(9);
+		System.out.println(Integer.toBinaryString(value));
 
-		System.out.println(a.toString());
+//		TreeNode root = new TreeNode(1);
+//		TreeNode node2 = new TreeNode(2);
+//		TreeNode node3 = new TreeNode(3);
+//
+//		root.left = node2;
+//		root.right = node3;
+//
+//		TreeNode node4 = new TreeNode(4);
+//		node2.left = node4;
+//
+//		TreeNode node5 = new TreeNode(5);
+//		node3.right = node5;
+//
+//		zigzagLevelOrder(root);
 
-		MyLinkedList reverseList = new MyLinkedList();
-		a.reverse(reverseList, a.getHead());
-		System.out.println(reverseList.toString());
-
-		MyLinkedList mergeList = a.merge(a, b);
-		System.out.println(mergeList.toString());
-
-		MyNode middleNode = mergeList.findMiddleNode();
-		System.out.println(middleNode.value);
+//		MyLinkedList a = new MyLinkedList();
+//		a.add(1);
+//		a.add(4);
+//		a.add(5);
+//
+//		MyLinkedList b = new MyLinkedList();
+//		b.add(3);
+//		b.add(7);
+//		b.add(9);
+//
+//		System.out.println(a.toString());
+//
+//		MyLinkedList reverseList = new MyLinkedList();
+//		a.reverse(reverseList, a.getHead());
+//		System.out.println(reverseList.toString());
+//
+//		MyLinkedList mergeList = a.merge(a, b);
+//		System.out.println(mergeList.toString());
+//
+//		MyNode middleNode = mergeList.findMiddleNode();
+//		System.out.println(middleNode.value);
 	}
 }
