@@ -13,6 +13,7 @@ public class UDPHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 			throws Exception {
 		String req = packet.content().toString(CharsetUtil.UTF_8);
 		System.out.println("req:" + req);
+		System.out.println("remote ip : " + packet.sender().getHostString() + ":" + packet.sender().getPort());
 
 		ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer(req, CharsetUtil.UTF_8), packet.sender()));
 	}

@@ -25,6 +25,7 @@ public class UDPClient {
 
 		Channel channel = null;
 		try {
+			// UDP本地监听端口（如果为0将表示由系统分配，否则使用指定端口）
 			channel = bootstrap.bind(0).sync().channel();
 
 			InetSocketAddress rAddress = new InetSocketAddress(ip, port);
