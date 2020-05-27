@@ -2,7 +2,6 @@ package com.web.rudp;
 
 import io.jpower.kcp.netty.UkcpChannel;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
@@ -14,19 +13,22 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class KCPClientHandler extends ChannelInboundHandlerAdapter {
 
 	@Override
-	public void channelActive(ChannelHandlerContext ctx) {
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		UkcpChannel kcpCh = (UkcpChannel) ctx.channel();
+		kcpCh.conv(KCPServer.CONV);
 
-		String msg = "sam";
-
-		ByteBuf buf = Unpooled.buffer(3);
-		buf.writeBytes(msg.getBytes());
-
-		ctx.writeAndFlush(buf);
+		System.out.println("remote address : " + ctx.channel().remoteAddress().toString());
 	}
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) {
-		ctx.write(msg);
+		if (msg instanceof ByteBuf) {
+			ByteBuf buf = (ByteBuf) msg;
+			byte[] data = new byte[buf.readableBytes()];
+			buf.readBytes(data);
+
+			System.out.println("resp : " + new String(data).toString());
+		}
 	}
 
 	@Override

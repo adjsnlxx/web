@@ -5,6 +5,9 @@ import io.jpower.kcp.netty.UkcpChannel;
 import io.jpower.kcp.netty.UkcpChannelOption;
 import io.jpower.kcp.netty.UkcpClientChannel;
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -32,13 +35,23 @@ public class KCPClient {
 			});
 			ChannelOptionHelper.nodelay(b, true, 20, 2, true);
 			b.option(UkcpChannelOption.UKCP_MTU, 512);
-			b.option(UkcpChannelOption.UKCP_AUTO_SET_CONV, true);
 
 			// Start the client.
 			ChannelFuture f = b.connect(HOST, PORT).sync();
 
+			Channel channel = f.channel();
+
+			for (int i = 0; i< 2; i++) {
+				ByteBuf message = Unpooled.buffer(5);
+				message.writeBytes("hello".getBytes());
+				channel.writeAndFlush(message);
+			}
+
+			Thread.sleep(2000);
+			channel.close();
+
 			// Wait until the connection is closed.
-			f.channel().closeFuture().sync();
+			// f.channel().closeFuture().sync();
 		} finally {
 			// Shut down the event loop to terminate all threads.
 			group.shutdownGracefully();
