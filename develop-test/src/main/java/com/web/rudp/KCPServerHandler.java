@@ -1,12 +1,10 @@
 package com.web.rudp;
 
 import io.jpower.kcp.netty.UkcpChannel;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.SimpleChannelInboundHandler;
 
-public class KCPServerHandler extends ChannelInboundHandlerAdapter {
+public class KCPServerHandler extends SimpleChannelInboundHandler<KCPMessage> {
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -19,21 +17,13 @@ public class KCPServerHandler extends ChannelInboundHandlerAdapter {
 	}
 
 	@Override
-	public void channelRead(ChannelHandlerContext ctx, Object msg) {
+	protected void channelRead0(ChannelHandlerContext ctx, KCPMessage msg) throws Exception {
 		UkcpChannel kcpCh = (UkcpChannel) ctx.channel();
 		System.out.println("conv = " + kcpCh.conv());
 
-		if (msg instanceof ByteBuf) {
-			ByteBuf buf = (ByteBuf) msg;
-			byte[] data = new byte[buf.readableBytes()];
-			buf.readBytes(data);
-
-			System.out.println("req : " + new String(data).toString());
-
-			ByteBuf message = Unpooled.buffer(5);
-			message.writeBytes("ok".getBytes());
-			ctx.writeAndFlush(message);
-		}
+		KCPMessage message = new KCPMessage();
+		message.setMsg("repsonse1");
+		ctx.writeAndFlush(message);
 	}
 
 	@Override
@@ -47,4 +37,5 @@ public class KCPServerHandler extends ChannelInboundHandlerAdapter {
 		cause.printStackTrace();
 		ctx.close();
 	}
+
 }

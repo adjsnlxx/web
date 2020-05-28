@@ -25,6 +25,8 @@ public class KCPServer {
 				@Override
 				public void initChannel(UkcpChannel ch) throws Exception {
 					ChannelPipeline p = ch.pipeline();
+					p.addLast(new KCPEncoder());
+					p.addLast(new KCPDecoder());
 					p.addLast(new KCPServerHandler());
 				}
 			});

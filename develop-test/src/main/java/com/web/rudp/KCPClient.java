@@ -42,8 +42,8 @@ public class KCPClient {
 			Channel channel = f.channel();
 
 			for (int i = 0; i< 2; i++) {
-				ByteBuf message = Unpooled.buffer(5);
-				message.writeBytes("hello".getBytes());
+				ByteBuf message = channel.alloc().buffer(3); // Unpooled.buffer(5);
+				message.writeBytes("sam".getBytes());
 				channel.writeAndFlush(message);
 			}
 
